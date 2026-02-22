@@ -25,48 +25,26 @@ st.set_page_config(page_title="Food Price Prediction", layout="wide")
 st.markdown("""
 <style>
 
-/* Full page background */
-.stApp {
-    background-image: url("https://images.unsplash.com/photo-1498837167922-ddd27525d352");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-/* Dark overlay */
-.stApp::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.85);  /* DARKER overlay */
-    z-index: -1;
-}
-
-/* Make ALL text white */
-html, body, [class*="css"]  {
-    color: white !important;
-}
-
-/* Main container styling */
-.block-container {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 2rem;
-    border-radius: 20px;
-}
-
-/* Make title big and visible */
-h1 {
-    color: #FFD700 !important;  /* Gold color */
-    font-size: 42px !important;
+/* Metric Card Styling */
+[data-testid="stMetric"] {
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+    border-radius: 15px;
     text-align: center;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.6);
 }
 
-/* Subheaders */
-h2, h3 {
+/* Metric Label */
+[data-testid="stMetricLabel"] {
     color: #00FFCC !important;
+    font-size: 20px !important;
+}
+
+/* Metric Value */
+[data-testid="stMetricValue"] {
+    color: #FFFFFF !important;
+    font-size: 35px !important;
+    font-weight: bold;
 }
 
 </style>
@@ -215,3 +193,4 @@ if st.button("Predict Price"):
 
 
     st.success(f"💰 Predicted Checkout Price: ₹ {round(prediction, 2)}")
+
