@@ -76,7 +76,7 @@ st.title("🍽 Food Checkout Price Prediction System")
 # --------------------------------------------------
 # Load Dataset Directly
 # --------------------------------------------------
-df = pd.read_csv("E:/pooja/food-demand/food_Demand_test.csv")
+df = pd.read_csv("food_Demand_test.csv")
 
 st.subheader("📊 Dataset Preview")
 st.dataframe(df.head())
@@ -212,5 +212,6 @@ if st.button("Predict Price"):
 
     # Safety check
     prediction = max(0, prediction)
+
 
     st.success(f"💰 Predicted Checkout Price: ₹ {round(prediction, 2)}")
