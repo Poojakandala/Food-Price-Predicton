@@ -140,8 +140,3 @@ http://localhost:8501
 - Deployment on Streamlit Cloud / AWS
 - Add feature importance visualization
 
---- 
-
----
-
-⭐ If you like this project, consider giving it a star!
